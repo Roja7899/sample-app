@@ -1,0 +1,17 @@
+
+#outer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    
+}
+table,th,td{
+    width: 40%;
+    
+    
+    border: 1px solid black;}
+
+
+table:hover {background-color: white}
+td:hover {background-color:rgb(35, 185, 223);}

@@ -1,35 +1,20 @@
-import logo from './logo.svg';
+
 import './App.css';
-import axios from'axios';
+import Login from"./Login";
+import { BrowserRouter as Router,Routes,Route} from "react-router-dom";
+import Display from"./Display";
 
 function App() {
-  const clickButton =(username, password)=>{
-    const loginDetails = {
-      email: username,
-      password: password
-    }
-    axios.post('https://reqres.in/api/login',loginDetails )
-    .then(function (response) {
-      console.log(response);
-    })
-  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>SAMPLE app</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <button onClick={()=>clickButton("eve.holt@reqres.in","dsada")}>CLick Post</button>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+      <Route path="/" element={<Login/>}/>
+      <Route  path="/display" element={<Display/>}/>
+        
+      
+      </Routes>
+    </Router>
+    
   );
 }
 

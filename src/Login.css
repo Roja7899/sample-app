@@ -1,0 +1,14 @@
+
+.login-wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size: 30px;
+}
+input[type=text]:hover{
+    background-color: lightblue;
+  }
+  input[type=password]:hover{
+    background-color: lightblue;
+  }
